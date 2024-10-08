@@ -1,0 +1,26 @@
+.footer {
+  color: #333; /* Color de texto */
+  text-align: center;
+  padding: 20px 0; /* Espaciado superior e inferior */
+  width: 100%;
+}
+
+.footer-content {
+  max-width: 1200px; /* Ancho máximo para el contenido */
+  margin: 0 auto; /* Centrar el contenido */
+}
+
+.social-links {
+  margin-top: 10px; /* Espacio entre el texto y los enlaces */
+}
+
+.social-links a {
+  color: #FFA726; /* Color de los enlaces anaranjados */
+  margin: 0 10px; /* Espaciado entre enlaces */
+  text-decoration: none; /* Sin subrayado */
+  transition: color 0.3s ease; /* Transición suave para el color */
+}
+
+.social-links a:hover {
+  color: #E6F1FF; /* Color de los enlaces al pasar el ratón */
+}
