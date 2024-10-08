@@ -1,0 +1,59 @@
+.experience {
+  color: #E6F1FF; /* Color de texto claro */
+  padding: 40px 20px;
+  text-align: center;
+  height: 100vh; /* Ocupar toda la altura de la ventana */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centrar verticalmente */
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.timeline {
+  position: relative;
+  margin: 0 auto;
+  max-width: 800px; /* Máximo ancho de la línea de tiempo */
+  width: 100%; /* Ocupar el 100% del ancho disponible */
+}
+
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  margin: 30px 0; /* Espaciado entre items */
+  position: relative;
+}
+
+.dot {
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1; /* Mantener la burbuja por encima del contenido */
+}
+
+.content {
+  padding-left: 30px; /* Espacio a la izquierda del contenido */
+  border-left: 2px solid #FFA726; /* Línea vertical */
+  max-width: 80%; /* Ancho máximo del contenido */
+  margin-left: 20px; /* Espaciado entre la línea y el contenido */
+}
+
+.content h3 {
+  font-size: 1.8rem;
+  margin: 10px 0;
+}
+
+.company {
+  font-style: italic;
+  color: #FFA726; /* Color anaranjado */
+}
+
+.date {
+  font-weight: bold;
+}
