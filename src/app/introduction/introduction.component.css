@@ -2,14 +2,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh; /* Ocupar toda la altura de la ventana */
-  color: #E6F1FF; /* Color de texto claro */
-  padding: 20px;
+  height: 100vh;
+  color: #E6F1FF;
   text-align: center;
 }
 
 .intro-content {
-  padding: 40px;
+  padding: 20px;
 }
 
 .name {
