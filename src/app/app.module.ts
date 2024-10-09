@@ -10,6 +10,15 @@ import { ProjectsComponent } from './projects/projects.component';
 import { IntroductionComponent } from './introduction/introduction.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
+import {RouterLink} from "@angular/router";
+import {
+  CarouselCaptionComponent, CarouselComponent,
+  CarouselControlComponent, CarouselIndicatorsComponent,
+  CarouselInnerComponent,
+  CarouselItemComponent, ThemeDirective
+} from "@coreui/angular";
+import {NgFor} from "@angular/common";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
@@ -17,14 +26,17 @@ import { FooterComponent } from './footer/footer.component';
     ExperienceComponent,
     AboutMeComponent,
     ContactComponent,
-    ProjectsComponent,
     IntroductionComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ThemeDirective,
+    RouterLink,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
