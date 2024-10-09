@@ -1,3 +1,16 @@
-<div class="projects">
-  <h2 class="section-title">Mis Proyectos</h2>
+<div class="title">
+  <h1>My Projects</h1>
 </div>
+<div class="projects-container">
+  <div class="slideshow-container">
+    <div class="slide" *ngIf="currentProject">
+      <img class="project-card" src="assets/imagengeneradaconnightcafee1708680739301.jpg" alt="aaaa">
+      <h3>{{ currentProject.title }}</h3>
+      <p>{{ currentProject.subtitle }}</p>
+      <button (click)="prevProject()" class="nav-button">❮</button>
+      <button (click)="nextProject()" class="nav-button">❯</button>
+    </div>
+
+  </div>
+</div>
+
