@@ -79,3 +79,9 @@
   fill: orange; /* Cambia el color a naranja al pasar el cursor */
 }
 
+.position{
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: antiquewhite;
+}
+
