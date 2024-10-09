@@ -2,7 +2,7 @@
   color: #E6F1FF; /* Color de texto claro */
   padding: 0 20px;
   text-align: center;
-  height: 100vh; /* Ocupar toda la altura de la ventana */
+  /*height: 100vh;*/
   display: flex;
   flex-direction: column;
   justify-content: center; /* Centrar verticalmente */
@@ -57,4 +57,8 @@
 
 .date {
   font-weight: bold;
+}
+
+ul{
+  text-align: justify;
 }
