@@ -1,0 +1,12 @@
+.about-me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
