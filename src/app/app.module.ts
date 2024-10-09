@@ -11,10 +11,6 @@ import { IntroductionComponent } from './introduction/introduction.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import {RouterLink} from "@angular/router";
-import {
-  ThemeDirective
-} from "@coreui/angular";
-import {NgOptimizedImage} from "@angular/common";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
@@ -31,10 +27,8 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ThemeDirective,
     RouterLink,
     BrowserAnimationsModule,
-    NgOptimizedImage
   ],
   providers: [],
   bootstrap: [AppComponent]
