@@ -12,12 +12,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import {RouterLink} from "@angular/router";
 import {
-  CarouselCaptionComponent, CarouselComponent,
-  CarouselControlComponent, CarouselIndicatorsComponent,
-  CarouselInnerComponent,
-  CarouselItemComponent, ThemeDirective
+  ThemeDirective
 } from "@coreui/angular";
-import {NgFor} from "@angular/common";
+import {NgOptimizedImage} from "@angular/common";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
@@ -36,7 +33,8 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     AppRoutingModule,
     ThemeDirective,
     RouterLink,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgOptimizedImage
   ],
   providers: [],
   bootstrap: [AppComponent]
