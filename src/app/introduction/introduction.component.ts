@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {NavigationService} from "../services/navigation.service";
 
 @Component({
   selector: 'app-introduction',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class IntroductionComponent {
 
+  constructor(readonly navigationService: NavigationService) {
+  }
 }

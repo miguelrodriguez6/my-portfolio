@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {NavigationService} from "../services/navigation.service";
 
 @Component({
   selector: 'app-navbar',
@@ -7,12 +8,6 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
 
-  scrollToSection(event: Event, sectionId: string) {
-    event.preventDefault();
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  }
+  constructor(readonly navigationService: NavigationService) { }
 
 }
