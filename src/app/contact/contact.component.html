@@ -1,7 +1,7 @@
 <div class="contact-me" id="contact">
   <h1>Contact Me</h1>
 
-  <form class="contact-form">
+  <form class="contact-form" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
     <div class="form-group">
       <label for="name">Name</label>
       <input type="text" id="name" required>
@@ -19,7 +19,9 @@
 
   <div class="contact-details">
     <h2>Other Ways to Reach Me:</h2>
-    <p>Email: <a href="mailto:rodriguez.miguel4300@gmail.com">rodriguez.miguel4300&#64;gmail.com</a></p>
-    <p>Phone: (+34) 604 009 206</p>
+    <div class="other-contact-options">
+      <p>Email: <a href="mailto:rodriguez.miguel4300@gmail.com">rodriguez.miguel4300&#64;gmail.com</a></p>
+      <p>Phone: (+34) 604 009 206</p>
+    </div>
   </div>
 </div>
