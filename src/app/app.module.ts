@@ -13,6 +13,7 @@ import { FooterComponent } from './footer/footer.component';
 import {RouterLink} from "@angular/router";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {FormsModule} from "@angular/forms";
+import {HttpClientModule, provideHttpClient} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -32,7 +33,7 @@ import {FormsModule} from "@angular/forms";
     BrowserAnimationsModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [provideHttpClient()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
