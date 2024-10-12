@@ -1,8 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
+import {DomSanitizer, SafeHtml} from "@angular/platform-browser";
+
 
 interface Project {
   title: string;
-  subtitle: string;
+  description: string;
+  images: string[];
+  currentImageIndex: number;
 }
 
 @Component({
@@ -10,27 +14,35 @@ interface Project {
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.css']
 })
-export class ProjectsComponent implements OnInit {
-  projects: Project[] = [
-    { title: 'Project 1', subtitle: 'Description for project 1' },
-    { title: 'Project 2', subtitle: 'Description for project 2' },
-    { title: 'Project 3', subtitle: 'Description for project 3' }
-  ];
+export class ProjectsComponent implements OnInit, OnDestroy  {
+  projects: { images: string[]; currentImageIndex: number; description: string; title: string }[] = [];
 
-  currentIndex: number = 0;
-  currentProject: Project | null = null;
+  intervalId: any;
+
+  constructor(private sanitizer: DomSanitizer) {
+    this.projects = [
+      { title: 'Data analysis and visualization', description: 'Tactical Camera Data Analysis and visualization in FootballTactical Camera Data Analysis and visualization in FootballTactical Camera Data Analysis and visualization in FootballTactical Camera Data Analysis and visualization in Football', images: ['assets/tactical-camera-project-images/TC1.png', 'assets/tactical-camera-project-images/TC2.png', 'assets/tactical-camera-project-images/TC3.png', 'assets/tactical-camera-project-images/TC4.png', 'assets/tactical-camera-project-images/TC5.png', 'assets/tactical-camera-project-images/TC6.png'], currentImageIndex: 0,},
+    ];
+  }
 
   ngOnInit(): void {
-    this.currentProject = this.projects[this.currentIndex];
+    this.startImageRotation();
   }
 
-  nextProject(): void {
-    this.currentIndex = (this.currentIndex + 1) % this.projects.length; // Vuelve al primer proyecto al llegar al final
-    this.currentProject = this.projects[this.currentIndex];
+  startImageRotation(): void {
+    this.intervalId = setInterval(() => {
+      this.projects.forEach((project) => {
+        if (project.images.length > 0) {
+          project.currentImageIndex = (project.currentImageIndex + 1) % project.images.length;
+        }
+      });
+    }, 3000);
   }
 
-  prevProject(): void {
-    this.currentIndex = (this.currentIndex - 1 + this.projects.length) % this.projects.length; // Vuelve al último proyecto al llegar al principio
-    this.currentProject = this.projects[this.currentIndex];
+
+  ngOnDestroy(): void {
+    if (this.intervalId) {
+      clearInterval(this.intervalId);
+    }
   }
 }
