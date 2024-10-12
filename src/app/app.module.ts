@@ -13,7 +13,8 @@ import { FooterComponent } from './footer/footer.component';
 import {RouterLink} from "@angular/router";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {FormsModule} from "@angular/forms";
-import {HttpClientModule, provideHttpClient} from "@angular/common/http";
+import {provideHttpClient} from "@angular/common/http";
+import {CommonModule, NgOptimizedImage} from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -32,6 +33,8 @@ import {HttpClientModule, provideHttpClient} from "@angular/common/http";
     RouterLink,
     BrowserAnimationsModule,
     FormsModule,
+    CommonModule,
+    NgOptimizedImage
   ],
   providers: [provideHttpClient()],
   bootstrap: [AppComponent]
