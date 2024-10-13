@@ -10,7 +10,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { IntroductionComponent } from './introduction/introduction.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
-import {RouterLink} from "@angular/router";
+import {RouterModule} from "@angular/router";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {FormsModule} from "@angular/forms";
 import {provideHttpClient} from "@angular/common/http";
@@ -30,7 +30,7 @@ import {CommonModule, NgOptimizedImage} from "@angular/common";
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterLink,
+    RouterModule,
     BrowserAnimationsModule,
     FormsModule,
     CommonModule,
