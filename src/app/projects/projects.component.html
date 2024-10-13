@@ -1,5 +1,5 @@
 <div class="projects-container" id="projects">
-  <h1>&lt;/&gt; Proyectos</h1>
+  <h1>&lt;/&gt; Projects</h1>
 
   <div *ngFor="let project of projects" class="project-card">
     <img [src]="project.images[project.currentImageIndex]" alt="Load image error" class="project-image"/>
@@ -9,10 +9,10 @@
         {{project.description}}
       </p>
       <div class="buttons">
-        <button class="btn">
+        <button *ngIf="project.githubRepoUrl" class="btn" (click)="redirectTo(project.githubRepoUrl)">
           Code
         </button>
-        <button hidden class="btn">Preview</button>
+        <button *ngIf="project.previewUrl" class="btn" (click)="redirectTo(project.previewUrl)">Preview</button>
       </div>
     </div>
   </div>

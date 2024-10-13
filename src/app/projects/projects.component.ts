@@ -1,5 +1,4 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {DomSanitizer, SafeHtml} from "@angular/platform-browser";
 
 
 interface Project {
@@ -7,6 +6,8 @@ interface Project {
   description: string;
   images: string[];
   currentImageIndex: number;
+  githubRepoUrl: string | null;
+  previewUrl: string | null;
 }
 
 @Component({
@@ -15,13 +16,13 @@ interface Project {
   styleUrls: ['./projects.component.css']
 })
 export class ProjectsComponent implements OnInit, OnDestroy  {
-  projects: { images: string[]; currentImageIndex: number; description: string; title: string }[] = [];
+  projects: Project[] = [];
 
   intervalId: any;
 
-  constructor(private sanitizer: DomSanitizer) {
+  constructor() {
     this.projects = [
-      { title: 'Data analysis and visualization', description: 'Tactical Camera Data Analysis and visualization in FootballTactical Camera Data Analysis and visualization in FootballTactical Camera Data Analysis and visualization in FootballTactical Camera Data Analysis and visualization in Football', images: ['assets/tactical-camera-project-images/TC1.png', 'assets/tactical-camera-project-images/TC2.png', 'assets/tactical-camera-project-images/TC3.png', 'assets/tactical-camera-project-images/TC4.png', 'assets/tactical-camera-project-images/TC5.png', 'assets/tactical-camera-project-images/TC6.png'], currentImageIndex: 0,},
+      { title: 'FootballData - Tactical Camera Data Analysis and visualization in Football.', description: 'A modular, extensible, and maintainable platform for football match analysis. The platform enables team analysts to upload data and videos of their matches, allowing them to subsequently visualize the positioning of their own players as well as players from other teams (potential recruits), extract key plays, and even review a report containing statistics and graphical insights about the match.', images: ['assets/tactical-camera-project-images/TC1.png', 'assets/tactical-camera-project-images/TC2.png', 'assets/tactical-camera-project-images/TC3.png', 'assets/tactical-camera-project-images/TC4.png', 'assets/tactical-camera-project-images/TC5.png', 'assets/tactical-camera-project-images/TC6.png', 'assets/tactical-camera-project-images/TC7.png'], currentImageIndex: 0, githubRepoUrl: "https://github.com/miguelrodriguez6/Football-Tactical-Camera-Data-Analysis/tree/master", previewUrl: null},
     ];
   }
 
@@ -44,5 +45,9 @@ export class ProjectsComponent implements OnInit, OnDestroy  {
     if (this.intervalId) {
       clearInterval(this.intervalId);
     }
+  }
+
+  redirectTo(url: string) {
+    window.open(url, '_blank');
   }
 }
