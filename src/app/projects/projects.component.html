@@ -13,6 +13,7 @@
           Code
         </button>
         <button *ngIf="project.previewUrl" class="btn" (click)="redirectTo(project.previewUrl)">Preview</button>
+        <button *ngIf="project.demoVideoUrl" class="btn" (click)="redirectTo(project.demoVideoUrl)">Demo video</button>
       </div>
     </div>
   </div>
