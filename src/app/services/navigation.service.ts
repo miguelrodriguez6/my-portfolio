@@ -14,4 +14,10 @@ export class NavigationService {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }
+
+  openPdf() {
+    const pdfUrl = 'assets/cv/cv.pdf';
+
+    window.open(pdfUrl, '_blank');
+  }
 }
