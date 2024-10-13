@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { AboutMeComponent } from './about-me/about-me.component';
-import { ContactComponent } from './contact/contact.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { IntroductionComponent } from './introduction/introduction.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -13,7 +12,6 @@ import { FooterComponent } from './footer/footer.component';
 import {RouterModule} from "@angular/router";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {FormsModule} from "@angular/forms";
-import {provideHttpClient} from "@angular/common/http";
 import {CommonModule, NgOptimizedImage} from "@angular/common";
 
 @NgModule({
@@ -21,7 +19,6 @@ import {CommonModule, NgOptimizedImage} from "@angular/common";
     AppComponent,
     ExperienceComponent,
     AboutMeComponent,
-    ContactComponent,
     IntroductionComponent,
     NavbarComponent,
     FooterComponent,
@@ -36,7 +33,7 @@ import {CommonModule, NgOptimizedImage} from "@angular/common";
     CommonModule,
     NgOptimizedImage
   ],
-  providers: [provideHttpClient()],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
