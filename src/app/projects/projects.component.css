@@ -16,6 +16,7 @@ h1 {
   overflow: hidden;
   width: 60vw;
   margin: auto auto 30px auto;
+  min-height: 40vh;
 }
 
 .project-image {
